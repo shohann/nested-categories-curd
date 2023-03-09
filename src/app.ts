@@ -1,13 +1,8 @@
-import express, { NextFunction, Request, Response } from 'express';
+import express from 'express';
+import { getPort } from './api/utils/appConfigs';
 
-const port: number  = 3001;
+const port: number = getPort();
 const app = express();
-
-import config from 'config';
-
-console.log(config.get<number>('port'));
-
-
 
 app.listen(port, () => {
     console.log(`Server started on port: ${port}`);
