@@ -1,4 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
+import { createCategory } from '../services/categoryService';
 
 export const getCategories = async (req: Request, res: Response, next: NextFunction) => {
     try {
@@ -14,9 +15,9 @@ export const setCategory = async (req: Request, res: Response, next: NextFunctio
     try {
         const { name } = req.body;
 
-        console.log(name);
+        const category = await createCategory(name);
         
-        res.send('Works')
+        res.send(category);
     } catch (error) {
         console.log(error);
         res.send(error)
