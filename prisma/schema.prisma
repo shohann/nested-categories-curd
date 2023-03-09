@@ -9,5 +9,6 @@ datasource db {
 
 model Category {
   id    String @id @default(auto()) @map("_id") @db.ObjectId
-  name  String  
+  name  String @unique
+  parentCategory String @default("root")
 }
