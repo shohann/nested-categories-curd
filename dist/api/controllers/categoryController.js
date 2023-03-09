@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getCategories = void 0;
+exports.setCategory = exports.getCategories = void 0;
 const getCategories = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         res.send('Works');
@@ -20,3 +20,13 @@ const getCategories = (req, res, next) => __awaiter(void 0, void 0, void 0, func
     }
 });
 exports.getCategories = getCategories;
+const setCategory = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        res.send('Works');
+    }
+    catch (error) {
+        console.log(error);
+        res.send(error);
+    }
+});
+exports.setCategory = setCategory;

@@ -7,5 +7,6 @@ const express_1 = __importDefault(require("express"));
 const categoryController_1 = require("../controllers/categoryController");
 const router = express_1.default.Router();
 router.route('/')
-    .get(categoryController_1.getCategories);
+    .get(categoryController_1.getCategories)
+    .post(categoryController_1.setCategory);
 exports.default = router;

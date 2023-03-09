@@ -24,8 +24,5 @@
     "prisma": "^4.11.0",
     "ts-node-dev": "^2.0.0",
     "typescript": "^4.9.5"
-  },
-  "prisma": {
-    "schema": "./src/api/models/schema.prisma"
   }
 }
