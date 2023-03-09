@@ -22,6 +22,8 @@ const getCategories = (req, res, next) => __awaiter(void 0, void 0, void 0, func
 exports.getCategories = getCategories;
 const setCategory = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
+        const { name } = req.body;
+        console.log(name);
         res.send('Works');
     }
     catch (error) {

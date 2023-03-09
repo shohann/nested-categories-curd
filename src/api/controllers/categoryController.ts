@@ -12,6 +12,9 @@ export const getCategories = async (req: Request, res: Response, next: NextFunct
 
 export const setCategory = async (req: Request, res: Response, next: NextFunction) => {
     try {
+        const { name } = req.body;
+
+        console.log(name);
         
         res.send('Works')
     } catch (error) {
