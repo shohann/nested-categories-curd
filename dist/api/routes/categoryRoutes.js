@@ -4,9 +4,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const categoryController_1 = require("../controllers/categoryController");
+// import { getCategories, 
+//          setCategory, 
+//          getCategory 
+//        } from '../controllers/categoryController';
 const router = express_1.default.Router();
-router.route('/')
-    .get(categoryController_1.getCategories)
-    .post(categoryController_1.setCategory);
+// router.route('/')
+//       .get(getCategories)
+//       .post(setCategory)
+// router.route('/:categoryId')
+//       .get(getCategory)
 exports.default = router;

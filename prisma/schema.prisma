@@ -8,7 +8,9 @@ datasource db {
 }
 
 model Category {
-  id    String @id @default(auto()) @map("_id") @db.ObjectId
-  name  String @unique
-  parentCategory String @default("root")
+  id        String    @id @default(auto()) @map("_id") @db.ObjectId
+  name      String    @unique
+  parentId  String?   @db.ObjectId
+  parent    Category? @relation("ParentCategory", fields: [parentId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  children  Category[] @relation("ParentCategory")
 }
