@@ -1,16 +1,16 @@
 import express from 'express';
-// import { getCategories, 
-//          setCategory, 
-//          getCategory 
-//        } from '../controllers/categoryController';
+import { setCategory,
+         getCategory,
+         getCategories
+       } from '../controllers/categoryController';
 
 const router = express.Router();
 
-// router.route('/')
-//       .get(getCategories)
-//       .post(setCategory)
+router.route('/')
+      .post(setCategory)
+      .get(getCategories)
 
-// router.route('/:categoryId')
-//       .get(getCategory)
+router.route('/:categoryId')
+      .get(getCategory)
 
 export default router;
